@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Social Media Foro</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="iniciar_sesion">INICIAR SESION</string>
+    <string name="registrate_aqui">REGISTRATE AQUI</string>
+    <string name="imagenlogo">imagenlogo</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="lock">lock</string>
+    <string name="email">email</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="registrate_ahora">REGISTRATE AHORA</string>
+    <string name="nombre_de_usuario">Nombre de Usuario</string>
+    <string name="Nombre_de_usuario">Nombre_de_usuario</string>
+    <string name="NombredeUsuario">NombredeUsuario</string>
+    <string name="correo_eletronico">Correo Eletronico</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+    <string name="registrate">REGISTRATE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
