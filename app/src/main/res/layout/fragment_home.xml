@@ -6,6 +6,8 @@
     tools:context=".fragments.HomeFragment"
     android:layout_marginBottom="70dp">
 
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
