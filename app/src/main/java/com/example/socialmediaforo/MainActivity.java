@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.socialmediaforo.provider.AuthProvider;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText mInputpassword;
     Button mbuttonlogin;
     FirebaseAuth mAuth;
+    AuthProvider mAuthProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mbuttonlogin = findViewById(R.id.btnlogin);
 
         mAuth = FirebaseAuth.getInstance();
+        mAuthProvider = new AuthProvider();
 
         mbuttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuthProvider.getUserSession() != null){
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
     }
 
     private void login() {
